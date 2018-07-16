@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class People {
 
     private String firstName;
@@ -9,7 +12,7 @@ public class People {
     }
 
 
-//
+// Getter & Setter for People (First & Last name):-
 
     public String getFirstName() {
         return firstName;
@@ -19,7 +22,6 @@ public class People {
         this.firstName = firstName;
     }
 
-
     public String getLastName() {
         return lastName;
     }
@@ -27,4 +29,19 @@ public class People {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-}
+
+
+//
+
+//    public ArrayList<String> randomPair(){
+//        ArrayList<String> twoPeoples = new ArrayList<>();
+//        shufflePeople();
+//        twoPeoples.add(people.get(0));
+//        twoPeoples.add(people.get(1));
+//        return twoPeoples;
+//    }
+
+    }
+
+
+

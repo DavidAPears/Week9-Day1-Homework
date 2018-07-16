@@ -1,10 +1,7 @@
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
 
 import static spark.Spark.get;
 import static spark.Spark.staticFileLocation;
@@ -53,13 +50,15 @@ public class PeopleController {
 
 //  BELOW RETURNS A PAIR OF RANDOM NAMES IN AN ARRAY LIST:
 
+        get ("/two_random_names", (req, res) -> {
+            ArrayList<People> twoNames = new ArrayList<>();
 
-        Random randomGenerator = new Random();
-        ArrayList sample = new ArrayList() {{ add(peoples);}};
-        People item = sample.get(randomGenerator.nextInt(sample.size()));
+            Collections.shuffle(peoples);
+            twoNames.add(peoples.get(0));
+            twoNames.add(peoples.get(1));
+            return twoNames.get(0).getFirstName() + twoNames.get(1).getFirstName() ;
 
-
-
+        });
 
     }
 }
