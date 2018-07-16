@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+
+    </tr>
+    #foreach ($people in $peoples)
+    <tr>
+        <td>$people.getFirstName()</td>
+        <td>$people.getLastName()</td>
+    <tr>
+        #end
+
+</table>
