@@ -14,8 +14,8 @@ public class People {
 
 // Getter & Setter for People (First & Last name):-
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return firstName + " " + lastName;
     }
 
     public void setFirstName(String firstName) {

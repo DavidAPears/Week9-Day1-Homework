@@ -45,18 +45,18 @@ public class PeopleController {
 
 
 
-//  BELOW RETURNS A RANDOM NAME:
+//  BELOW RETURNS A RANDOM NAME (on /one):
 
         get ("/one", (req, res) -> {
             ArrayList<People> names = new ArrayList<>();
 
             Collections.shuffle(peoples);
             names.add(peoples.get(0));
-            return names.get(0).getFirstName();
+            return names.get(0).getName();
         });
 
 
-//  BELOW RETURNS A PAIR OF RANDOM NAMES:
+////  BELOW RETURNS A PAIR OF RANDOM NAMES(on /two):
 
         get ("/two", (req, res) -> {
             ArrayList<People> twoNames = new ArrayList<>();
@@ -64,11 +64,11 @@ public class PeopleController {
             Collections.shuffle(peoples);
             twoNames.add(peoples.get(0));
             twoNames.add(peoples.get(1));
-            return twoNames.get(0).getFirstName() + " " + twoNames.get(1).getFirstName() ;
+            return twoNames.get(0).getName() + " " + twoNames.get(1).getName() ;
 
         });
 
-//  BELOW RETURNS THREE RANDOM NAMES:
+////  BELOW RETURNS THREE RANDOM NAMES(on /three):
 
         get ("/three", (req, res) -> {
             ArrayList<People> threeNames = new ArrayList<>();
@@ -77,10 +77,10 @@ public class PeopleController {
             threeNames.add(peoples.get(0));
             threeNames.add(peoples.get(1));
             threeNames.add(peoples.get(2));
-            return threeNames.get(0).getFirstName() + " " + threeNames.get(1).getFirstName() + " " + threeNames.get(2).getFirstName();
+            return threeNames.get(0).getName() + " " + threeNames.get(1).getName() + " " + threeNames.get(2).getName();
         });
 
-//  BELOW RETURNS FOUR RANDOM NAMES:
+////  BELOW RETURNS FOUR RANDOM NAMES (on /four):
 
         get ("/four", (req, res) -> {
             ArrayList<People> fourNames = new ArrayList<>();
@@ -90,7 +90,7 @@ public class PeopleController {
             fourNames.add(peoples.get(1));
             fourNames.add(peoples.get(2));
             fourNames.add(peoples.get(3));
-            return fourNames.get(0).getFirstName() + " " + fourNames.get(1).getFirstName() + " " + fourNames.get(2).getFirstName() + " " + fourNames.get(3).getFirstName();
+            return fourNames.get(0).getName() + " " + fourNames.get(1).getName() + " " + fourNames.get(2).getName() + " " + fourNames.get(3).getName();
         });
 
     }
