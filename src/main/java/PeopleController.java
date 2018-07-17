@@ -64,7 +64,7 @@ public class PeopleController {
             Collections.shuffle(peoples);
             twoNames.add(peoples.get(0));
             twoNames.add(peoples.get(1));
-            return twoNames.get(0).getFirstName() + twoNames.get(1).getFirstName() ;
+            return twoNames.get(0).getFirstName() + " " + twoNames.get(1).getFirstName() ;
 
         });
 
@@ -77,7 +77,7 @@ public class PeopleController {
             threeNames.add(peoples.get(0));
             threeNames.add(peoples.get(1));
             threeNames.add(peoples.get(2));
-            return threeNames.get(0).getFirstName() + threeNames.get(1).getFirstName() + threeNames.get(2).getFirstName();
+            return threeNames.get(0).getFirstName() + " " + threeNames.get(1).getFirstName() + " " + threeNames.get(2).getFirstName();
         });
 
 //  BELOW RETURNS FOUR RANDOM NAMES:
@@ -90,7 +90,7 @@ public class PeopleController {
             fourNames.add(peoples.get(1));
             fourNames.add(peoples.get(2));
             fourNames.add(peoples.get(3));
-            return fourNames.get(0).getFirstName() + fourNames.get(1).getFirstName() + fourNames.get(2).getFirstName() + fourNames.get(3).getFirstName();
+            return fourNames.get(0).getFirstName() + " " + fourNames.get(1).getFirstName() + " " + fourNames.get(2).getFirstName() + " " + fourNames.get(3).getFirstName();
         });
 
     }
